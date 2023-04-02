@@ -16,7 +16,7 @@ They are also deployed on Replit as an API of sorts...
 
 | Filename                       | Vulnerability                                   | Deployment Example                                                                |
 | ------------------------------ | ----------------------------------------------- | ------------------------------------------------------------------------- |
-| [titanium.c](/src/titanium.c) | Buffer overflow to overwrite a variable's value | [Click to run](https://hephaestus-api.sonicfruit.repl.co/titanium?arg1=AAAAAAAA) |
+| [titanium.c](/src/titanium.c) | Buffer overflow to overwrite a variable's value | [![Try with Replit Badge](https://replit.com/badge?caption=Try%20with%20Replit)](https://hephaestus-api.sonicfruit.repl.co/titanium?arg1=aaaaaaaa) |
 
 ## Usage
 
