@@ -2,10 +2,11 @@
 #include <string.h>
 
 /*
-gcc -fno-stack-protector -o part_one part_one.c
+WARNING -- dangerous compilation
+gcc -fno-stack-protector -o titanium titanium.c
 */
 
-#define FLAG "You got the flag!"
+#define FLAG "0x4067{}"
 #define SECRET "a4f53d"
 #define BUFFER_SIZE 8
 
