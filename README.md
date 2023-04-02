@@ -10,19 +10,36 @@ This repository contains binary exploitation and reverse engineering examples.
 
 ## Code Examples
 
-The code examples are located in the `src` directory. 
+The code examples are located in the `src` directory.
 
-Refer to the table below to learn more about what vulnerability the code contains:
+They are also deployed on Replit as an API of sorts...
 
-| Filename   | Vulnerability                                   |
-| ---------- | ----------------------------------------------- |
-| part_one.c | Buffer overflow to overwrite a variable's value |
+| Filename                       | Vulnerability                                   | Deployment Example                                                                |
+| ------------------------------ | ----------------------------------------------- | ------------------------------------------------------------------------- |
+| [titanium.c](/src/titanium.c) | Buffer overflow to overwrite a variable's value | [Click to run](https://hephaestus-api.sonicfruit.repl.co/titanium?arg1=AAAAAAAA) |
 
-## 📑 Todo
-- Add replit.com link
-- More dangerous stuff
+## Usage
+
+It is recommended to modify this repository from within a sandboxed environment  
+
+Your evironment should have the following:  
+- GCC
+- Python3
+
+Follow the compilation instructions for each of the C files in `/src`
+
+Install the Python dependencies
+```sh
+pip install -r requirements.txt
+```
+
+Run the Flask application
+```
+python3 hephaestus_api.py
+```
 
 
-## ⚠️ Disclaimer 
+
+## ⚠️ Disclaimer
 
 Please use caution and discretion when working with this code and always test it in a sandboxed environment. The owner and contributors of this repository are not responsible for any damages or harm caused by the use or misuse of this code.
