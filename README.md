@@ -14,31 +14,18 @@ The code examples are located in the `src` directory.
 
 They are also deployed on Replit as an API of sorts...
 
-| Filename                       | Vulnerability                                   | Deployment Example                                                                |
-| ------------------------------ | ----------------------------------------------- | ------------------------------------------------------------------------- |
-| [titanium.c](/src/titanium.c) | Buffer overflow to overwrite a variable's value | [![Try with Replit Badge](https://replit.com/badge?caption=Try%20with%20Replit)](https://hephaestus-api.sonicfruit.repl.co/titanium?arg1=aaaaaaaa) |
+| Filename                      | Vulnerability                                   | Deployment Example                                                                                                                    |
+| ----------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| [titanium.c](/src/titanium.c) | Buffer overflow to overwrite a variable's value | [![Try with Replit Badge](https://replit.com/badge?caption=Try%20with%20Replit)](https://titanium-hephaestus.0x4067.repl.co/titanium) |
+| [cobalt.c](/src/cobalt.c) | Format string vulnerability | [![Try with Replit Badge](https://replit.com/badge?caption=Try%20with%20Replit)](https://cobalt-hephaestus.0x4067.repl.co/cobalt)
 
 ## Usage
 
-It is recommended to modify this repository from within a sandboxed environment  
+Each vulnerable code file has a corresponding Python Flask wrapper. For example:
+- cobalt.c
+- cobalt.py
 
-Your evironment should have the following:  
-- GCC
-- Python3
-
-Follow the compilation instructions for each of the C files in `/src`
-
-Install the Python dependencies
-```sh
-pip install -r requirements.txt
-```
-
-Run the Flask application
-```
-python3 hephaestus_api.py
-```
-
-
+The Python wrapper allows interacting with the vulnerable binary via HTTP requests. Before that however, the wrapper handles code compilation and setting of environment variables.
 
 ## ⚠️ Disclaimer
 
