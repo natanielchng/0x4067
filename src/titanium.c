@@ -1,27 +1,26 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 /*
 WARNING -- dangerous compilation
 gcc -fno-stack-protector -o titanium titanium.c
 */
 
-#define FLAG "0x4067{}"
-#define SECRET "a4f53d"
-#define BUFFER_SIZE 8
-
 int main(int argc, char *argv[]) {
+  char* flag = getenv("FLAG");
+  char* secret = getenv("SECRET_KEY");
   struct ab { 
-  	char b[BUFFER_SIZE];
-    char a[BUFFER_SIZE];   
+  	char b[8];
+    char a[32];   
   } s;
   if(argc < 2) {
     return 1;
   }
-  strcpy(s.a, SECRET);
+  strcpy(s.a, secret);
   sscanf(argv[1], "%s", s.b);
-  if(strcmp(s.a, SECRET) != 0) {
-    printf("%s", FLAG);
+  if(strcmp(s.a, secret) != 0) {
+    printf("%s", flag);
   } else {
     return 1;
   }
