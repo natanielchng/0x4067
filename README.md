@@ -16,7 +16,7 @@ They are also deployed on Replit as an API of sorts...
 
 | Filename                            | Vulnerability                                      | Deployment Example                                                                                                                    |
 | ----------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| [titanium.c](/src/titanium.c)       | Buffer overflow to overwrite a variable's value    | [![Try with Replit Badge](https://replit.com/badge?caption=Try%20with%20Replit)](https://titanium-hephaestus.0x4067.repl.co/titanium) |
+| [titanium.c](/src/titanium.c)       | Buffer overflow to overwrite a variable's value    | [![Try with Replit Badge](https://replit.com/badge?caption=Try%20with%20Replit)](https://titanium-hephaestus.0x4067.repl.co) |
 | [cobalt.c](/src/cobalt.c)           | Format string vulnerability                        | [![Try with Replit Badge](https://replit.com/badge?caption=Try%20with%20Replit)](https://cobalt-hephaestus.0x4067.repl.co/cobalt)     |
 | [caesium.c](/src/caesium.c)         | Timing side channel attack                         | [![Try with Replit Badge](https://replit.com/badge?caption=Try%20with%20Replit)](https://cobalt-hephaestus.0x4067.repl.co/caesium)    |
 | [rehnium.c](/src/rehnium/rehnium.c) | "Reverse engineering"-like of a WebAssembly module |                                                                                                                                       |
