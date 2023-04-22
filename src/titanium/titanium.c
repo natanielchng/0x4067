@@ -3,8 +3,7 @@
 #include <stdlib.h>
 
 /*
-WARNING -- dangerous compilation
-gcc -fno-stack-protector -o titanium titanium.c
+ gcc -fno-stack-protector -o titanium titanium.c
 */
 
 int main(int argc, char *argv[]) {
@@ -22,7 +21,7 @@ int main(int argc, char *argv[]) {
   if(strcmp(s.a, secret) != 0) {
     printf("%s", flag);
   } else {
-    return 1;
+    printf("%s", s.b);
   }
   return 0;
 }
