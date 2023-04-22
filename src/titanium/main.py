@@ -1,31 +1,29 @@
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, request, render_template, redirect, url_for, session
 import subprocess
 import os
 
-flag = os.environ['FLAG']
-os.system(f'export FLAG={flag}')
-secret_key = os.environ['SECRET_KEY']
-os.system(f'export SECRET_KEY={secret_key}')
+sessions_key = os.environ['SESSIONS_KEY']
 
 app = Flask(__name__)
-
-form_placeholder = 'Enter payload here'
-
-response = ''
+app.secret_key = sessions_key
 
 @app.route('/')
 def index():
+    if session.get('response'):
+      response = session.get('response')
+    else:
+      response = ''
+      session['response'] = response
     return render_template('index.html', RESPONSE=response)
 
 @app.route('/titanium', methods=['POST'])
 def titanium():
-  global response
   arg1 = request.form['arg1']
   try:
     output = subprocess.check_output(['./titanium', arg1])
-    response = output.decode('utf-8')
+    session['response'] = output.decode('utf-8')
   except:
-    response = ''
+    session['response'] = ''
   return redirect(url_for('index'))
 
 if __name__ == '__main__':
