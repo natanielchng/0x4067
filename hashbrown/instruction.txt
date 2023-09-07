@@ -16,6 +16,6 @@ sudo chmod +x h45hbr0wn
 Then, you may run h45hbr0wn as such:
 ./h45hbr0wn <path_to_file_1> <path_to_file_2>
 
-Only authorised individuals have the correct key files to access the program
+Only authorised individuals have the correct files to access the program
 
 MHg0MDY3e2g0NWhicjB3bl9mMXI1N19mbDQ2fQ==

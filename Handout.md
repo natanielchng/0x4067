@@ -16,4 +16,4 @@ If you are successful in breaking into the program, the client will engage you f
 2. What was the flag encoded or encrypted with? (Hint: Gfxj64)
 3. What is the SHA256 sum for the amd64 Kali Linux 2023.3 ISO? (Hint: https://old.kali.org/kali-images/)
 4. What is the occurrence when two pieces of data share the same hash value? (Hint: piap kwttqaqwv)
-5. The `h45hbr0wn` program requires two files (or keys) to run. You will have to craft or find keys to access the program. What is the flag obtained?
+5. The `h45hbr0wn` program requires two files to run. You will have to craft or find files to access the program. What is the flag obtained?
