@@ -5,6 +5,7 @@
 
 /*
 gcc -z execstack -fno-stack-protector -o hexhunt hexhunt.c 
+./hexhunt -p "AAAA %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %s %x %x %x %x %x %x %x %x %x"
 */
 
 int main(int argc, char *argv[]) {
@@ -14,7 +15,7 @@ int main(int argc, char *argv[]) {
   char* flag2 = "0x4067{h3xhun7_74r637_0v3rfl0w3d}";
   
   struct ab { 
-  	char b[8];
+  	char b[1024];
     char a[32];   
   } s;
   
@@ -30,6 +31,7 @@ int main(int argc, char *argv[]) {
     printf("++ OPTIONs ++\n");
     printf("    -p : Reformat TARGET\n");
     printf("    -o : Overwhelm TARGET\n");
+    printf("    -d : DDOS TARGET\n");
     printf("\n\n");
   }
 
@@ -63,9 +65,40 @@ int main(int argc, char *argv[]) {
     printf("\n\n");
   }
   
+  else if(strcmp(argv[1], "-d") == 0) {
+    int maxPackets = 16;
+    int numPackets;
+    char inputBuffer[100];
+    char* tierMessage = "Please subscribe to Premium tier for higher payload quota!";
+    printf("\n\n");
+    printf("Entering DDOS Session");
+    printf("\n\n");
+    
+    while(1) {
+        printf("You have %d payloads left. %s", maxPackets, tierMessage);
+        printf("\n\n");
+        
+        printf("Please enter the number of payloads to send: ");
+        fgets(inputBuffer, sizeof(inputBuffer), stdin);
+        if (sscanf(inputBuffer, "%d", &numPackets) == 1) {
+            printf("Sent %d packets!", numPackets);
+            maxPackets = maxPackets - numPackets;
+        } else {
+            printf("Please enter a valid number.");
+        }
+        
+        if(maxPackets > 16) {
+            tierMessage = "Your Premium tier account is: 0x4067{h3xhun7_1n7363r_wr4p_4r0und}";
+        }
+        
+        printf("\n\n");
+    }
+  }
+  
   else {
     useMessage();
   }
-
+  
+  
   return 0;
 }
