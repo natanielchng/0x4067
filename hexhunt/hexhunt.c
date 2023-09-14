@@ -4,9 +4,20 @@
 #include <stdarg.h>
 
 /*
-gcc -z execstack -fno-stack-protector -o hexhunt hexhunt.c 
-./hexhunt -p "AAAA %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %x %s %x %x %x %x %x %x %x %x %x"
+gcc -z execstack -fno-stack-protector -no-pie -o hexhunt hexhunt.c 
 */
+
+void returnToTarget() {
+    char buffer1[16];
+    gets(buffer1);
+ }
+
+void returnAFlag() {
+    printf("\n\n");
+    printf("Seems like something else was returned instead... ");
+    puts("0x4067{h3xhun7_r37urn_70_fl46}");
+    printf("\n\n");
+} 
 
 int main(int argc, char *argv[]) {
   
@@ -32,6 +43,7 @@ int main(int argc, char *argv[]) {
     printf("    -p : Reformat TARGET\n");
     printf("    -o : Overwhelm TARGET\n");
     printf("    -d : DDOS TARGET\n");
+    printf("    -r : Return data to TARGET");
     printf("\n\n");
   }
 
@@ -92,7 +104,15 @@ int main(int argc, char *argv[]) {
         }
         
         printf("\n\n");
-    }
+    } 
+  }
+  
+  else if(strcmp(argv[1], "-r") == 0) {
+    printf("\n\n");
+    printf("Enter data (in bytes) to return to the target: ");
+    returnToTarget();
+    printf("\nData has been returned!");
+    printf("\n\n");
   }
   
   else {
