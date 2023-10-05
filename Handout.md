@@ -14,9 +14,8 @@ If you are successful in breaking into the program, the client will engage you f
 ### Questions
 1. The `hashbrown_readme.txt` file contains a mysterious alphanumeric string. What is the originial text contained in this string?
 2. What was the message encoded or encrypted with?
-3. What is the SHA256 sum for the amd64 Kali Linux 2023.3 ISO?
-4. What is the occurrence when two pieces of data share the same hash value? (Hint: piap kwttqaqwv)
-5. The `h45hbr0wn` program requires two files to run. You will have to craft or find files to access the program. What is the flag obtained from this program?
+3. What is the occurrence when two pieces of data share the same hash value? (Hint: piap kwttqaqwv)
+4. The `h45hbr0wn` program requires two files to run. You will have to craft or find files to access the program. What is the flag obtained from this program?
 
 ## Catastrophic Vulnerabilities Everywhere
 Upon further investigation of the `h45hbr0wn` program, you found that is has been making requests to an IP address `155.69.19.55`.
