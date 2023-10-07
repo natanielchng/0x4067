@@ -4,7 +4,6 @@ import binascii
 
 def login(password):
   key = binascii.unhexlify("31333436").decode('utf-8')
-  flag = "3078343036377B37316D336C347035335F756E307D"
   correct_counter = 0
   try:
     for index, digit in enumerate(password):
@@ -22,7 +21,7 @@ def login(password):
     return
   if correct_counter == len(key):
     print("\n")
-    print("Flag: ", binascii.unhexlify(flag).decode('utf-8'))
+    print("Flag: 0x4067{TIMELAPSE_IS_ALL_ABOUT_SIDE_CHANNELS}")
     print("\n")
   else:
     print("\n")
@@ -40,7 +39,7 @@ def main():
    ██    ██ ██      ██ ██████  ███████      ██ ██      ███████ ██████
   """)
   if len(sys.argv) < 2:
-    print("Usage: ./71m3l4p53 <password>")
+    print("Usage: ./timelapse <password>")
     print("Please enter the 4 digit numerical password...")
     print("\n")
   else:

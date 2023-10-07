@@ -4,18 +4,18 @@
 #include <stdarg.h>
 
 /*
-gcc -z execstack -fno-stack-protector -no-pie -o hexhunt hexhunt.c 
+gcc -z execstack -fno-stack-protector -no-pie -o hexhunt hexhunt.c
 */
 
 void returnToTarget() {
-    char buffer1[16];
+    char buffer1[100];
     gets(buffer1);
  }
 
 void returnAFlag() {
     printf("\n\n");
     printf("Seems like something else was returned instead... ");
-    puts("0x4067{h3xhun7_r37urn_70_fl46}");
+    puts("0x4067{HEXHUNT_FLAG_HAS_BEEN_RETURNED}");
     printf("\n\n");
 } 
 
@@ -23,10 +23,10 @@ int main(int argc, char *argv[]) {
   
   char* flag = "0x4067{h3xhun7_7h3_f0rm47_57r1n6}";
   char buf[100];
-  char* flag2 = "0x4067{h3xhun7_74r637_0v3rfl0w3d}";
+  char* flag2 = "0x4067{HEXHUNT_OVERFLOWING_WITH_GOOD_VIBES}";
   
   struct ab { 
-  	char b[1024];
+  	char b[32];
     char a[32];   
   } s;
   
@@ -100,7 +100,7 @@ int main(int argc, char *argv[]) {
         }
         
         if(maxPackets > 16) {
-            tierMessage = "Your Premium tier account is: 0x4067{h3xhun7_1n7363r_wr4p_4r0und}";
+            tierMessage = "Your Premium tier account is: 0x4067{SEE_YOU_ON_19_JANUARY_2038}";
         }
         
         printf("\n\n");
