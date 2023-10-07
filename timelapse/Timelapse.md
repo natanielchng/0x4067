@@ -45,4 +45,4 @@ Access denied...
 
 ### (2b) Continue following the trail based off the information found in (2a). What is the second steganography technique used?
 
-### (2c)
+### (2c) The flag obtained from (2b) contains a link to a research paper. What is the phone model discussed in the paper?
