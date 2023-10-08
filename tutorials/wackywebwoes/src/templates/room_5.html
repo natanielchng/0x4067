@@ -1,0 +1,23 @@
+<head>
+  <title>Wacky Web Woes</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/pico.min.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>Room 5</h1>
+    <p>
+      SQL Injection (SQLi) can have significant cybersecurity impacts because it allows attackers to manipulate SQL queries in a way that can lead to unauthorized access, data leakage, or even data manipulation in a database. This vulnerability emphasises the importance of input validation, parameterized queries, and secure coding practices in web application security.
+    </p>
+    <!--usernames: room5-->
+    <form method="POST">
+      <input type="text" id="username" name="username" placeholder="Enter username">
+      <input type="text" id="password" name="password" placeholder="Enter password">
+      <button type="submit">Login</button>
+    </form>
+    {% if show_non_working_button %}
+      <a href="" role="button">Go to Room 6</a>
+    {% elif show_working_button %}
+      <a href="{{href}}" role="button">Go to Room 6</a>
+    {% endif %}
+  </main>
+</body>

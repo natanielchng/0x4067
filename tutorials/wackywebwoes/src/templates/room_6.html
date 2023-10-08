@@ -1,0 +1,21 @@
+<head>
+  <title>Wacky Web Woes</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/pico.min.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>Room 6</h1>
+    <!-- Command injection, sometimes referred to as "Remote Code Execution" (RCE), allows attackers to execute code within an application, granting them remote access and control over the vulnerable system. This type of vulnerability is highly valuable to attackers as it enables them to access and manipulate system and user files and data. -->
+    <p>
+      Congratulations, you have completed the rooms! I hope you had fun practicing web hacking techniques!
+    </p>
+    <form method="POST">
+      <input type="text" id="feedback" name="feedback" placeholder="Please share your feedback!">
+      <button type="submit">Submit</button>
+    </form>
+    {% if show_return_message %}
+    <p>Thank you for your feedback! We shall echo your feedback here:</p>
+    <code>{{echo_message}}</code>
+    {% endif %}
+  </main>
+</body>

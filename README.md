@@ -17,30 +17,31 @@ The tutorials can be found under the `/tutorials` folder. The structure is as fo
         CVE.pdf                     --> Handout for CVE in PDF format
     /hashbrown
         /src
-            hashbrown.out           --> Executable used in Hashbrown (Question 5)
             hashbrown_source.py     --> Source code for hashbrown.out
+        hashbrown.out               --> Executable used in Hashbrown (Question 5)
         Hashbrown.md                --> Handout for Hashbrown in Markdown format
         Hashbrown.pdf               --> Handout for Hashbrown in PDF format
     /hexhunt
         /src
-            hexhunt.out             --> Executable used in Hexhunt (Question 1-3)
             hexhunt_source.c        --> Source code for hexhunt.out
+        hexhunt.out                 --> Executable used in Hexhunt (Question 1-3)
         Hexhunt.md                  --> Handout for Hexhunt in Markdown format
         Hexhunt.pdf                 --> Handout for Hexhunt in PDF format
     /timelapse
         /src
-            timelapse.out           --> Executable used in Timelapse (Question 1)
             timelapse_source.py     --> Source code for timelapse.out
+        timelapse.out               --> Executable used in Timelapse (Question 1)
         Timelapse.md                --> Handout for Timelapse in Markdown format
         Timelapse.pdf               --> Handout for Timelapse in PDF format
     /wackywebwoes
         /src
-            wackywebwoes.py         --> The main Flask web application used in Wacky Web Woes
+            wackywebwoes.py         --> The main Flask web application used in Wacky Web Woes, source code for wackywebwoes.out
             routes.py               --> contains the routes used by wackywebwoes.py
             /static
                 /css
                     pico.min.css    --> CSS styling for the Flask application
             /templates              --> folder containing the HTML templates used in the Flask application
+        wackywebwoes.out            --> Executable used in Wacky Web Woes
         WackyWebWoes.md             --> Handout for WackyWebWoes in PDF format
         WackyWebWoes.pdf            --> Handout for WackyWebWoes in PDF format
 ```

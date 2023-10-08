@@ -1,0 +1,28 @@
+<head>
+  <title>>Wacky Web Woes</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/pico.min.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>Room 4</h1>
+    <p>
+      Cross-Site Scripting (XSS) is where an attacker can inject malicious scripts into a web application, potentially compromising user data and security.
+    </p>
+  <p>
+    In this room, you are able to send messages to an Admin via the Message Panel. The messages received by the Admin can be viewed in the Admin Panel. Your task is to "force" the Admin to send a POST request containing the webpage cookies to the Malicious server in order to receive the path to the next room. The requests made to the malicious server can be viewed in the Malicious Server panel.
+  </p>
+  <grid>
+    <a href="{{main_path}}" role="button">View Message panel</a>
+    <a href="{{admin_path}}" role="button">View Admin panel</a>
+    <a href="{{server_path}}" role="button">View Malicious Server</a>
+  </grid>
+  <br><br>
+  <div>
+    <form method="POST">
+      <input type="text" id="message" name="message" placeholder="Write your message here...">
+      <button type="submit">Send message to Admin</button>
+    </form>
+  </div>
+ 
+  </main>
+</body>
