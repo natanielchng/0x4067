@@ -1,5 +1,5 @@
 # 0x4067
-*A Set of Capture-The-Flag tutorials for NTU's Software Security course*
+*A set of Capture-The-Flag tutorials for NTU's Software Security course*
 
 ## Overview of Project
 This project consists of 5 CTF tutorials, each dealing with a software security topic:
@@ -30,6 +30,7 @@ The tutorials can be found under the `/tutorials` folder. The structure is as fo
     /timelapse
         /src
             timelapse_source.py     --> Source code for timelapse.out
+            SCSE.jpg                --> Image used in Question 2
         timelapse.out               --> Executable used in Timelapse (Question 1)
         Timelapse.md                --> Handout for Timelapse in Markdown format
         Timelapse.pdf               --> Handout for Timelapse in PDF format
@@ -46,34 +47,29 @@ The tutorials can be found under the `/tutorials` folder. The structure is as fo
         WackyWebWoes.pdf            --> Handout for WackyWebWoes in PDF format
 ```
 
-## Modifying & Building the Challenges
+## Modifying and Distributing Challenge Code
+Challenges that contain some code can be found in their respective `/src` folder.
 
-### Catastrophic Vulnerabilities Everywhere (CVE)
-There is no code used for CVE, as it is an investigative exercise with information available online!
-
-### Hashbrown
-
-### Hexhunt
-The source code for Hexhunt can be found in `/hexhunt/src`. 
-
-`hexhunt.c` is the main challenge; `hexhunt.py` is a sample solution using the `pwn` library.
-
-Compile `hexhunt.c` with the following:
+### Special Compilation Instructions for 'hexhunt' Challenge
+The `C` file used in 'hexhunt' should be compiled with security flags removed:
 ```
 gcc -z execstack -fno-stack-protector -no-pie -o hexhunt hexhunt.c
 ```
 
+### Special Instructions for 'hashbrown', 'timelapse' and 'wackywebwoes'
+Since the source code are written in `Python`, the `pyinstaller` library is used to package them into an executable.
 
-### Wacky Web Woes
-The source code for Wacky Web Woes can be found in `/wackywebwoes/src`.  
-
-Wacky Web Woes is a simple Flask project. An overview of the project structure is as follows:
+**Hashbrown**
 ```
-/src
-    
+pyinstaller -w -F hashbrown.py
 ```
 
-`Pyinstaller` is used to bundle the Flask application into a single executable file. In the Flask project directory of `wackywebwoes.py`, run the following command:
+**Timelapse**
+```
+pyinstaller -w -F timelapse.py
+```
+
+**Wacky Web Woes**
 ```
 pyinstaller -w -F --add-data "templates:templates" --add-data "static:static" --add-data "routes.py:." wackywebwoes.py
 ```

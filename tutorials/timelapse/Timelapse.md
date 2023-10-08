@@ -41,5 +41,11 @@
    ```
 ## Question 2
 - You have been tasked with investigating an image found at the following link: `https://raw.githubusercontent.com/0x4067/KpMU0l0N/main/SCSE.jpg`. Is there any interesting information stored within the image file? If so, what is it and how was it stored?
+
+**Hint**
+- Search online for EXIF viewers and steganography tools!
+
+
+
 - Continue following the trail... What is the second steganography technique used?
 - The flag obtained contains a link to a research paper. What is the phone model discussed in the paper?
