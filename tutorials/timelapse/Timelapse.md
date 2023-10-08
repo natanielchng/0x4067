@@ -40,12 +40,11 @@
    Access denied...
    ```
 ## Question 2
-- You have been tasked with investigating an image found at the following link: `https://raw.githubusercontent.com/0x4067/KpMU0l0N/main/SCSE.jpg`. Is there any interesting information stored within the image file? If so, what is it and how was it stored?
+- You have been tasked with investigating an image found at the following link: `https://raw.githubusercontent.com/0x4067/KpMU0l0N/main/SCSE.png`. What is interesting about the metadata of the image?
+- A QR code with a link to a text file is hidden somewhere within the image. What is the steganography technique used in the text file?
+- The flag obtained contains a link to a research paper. What is the phone model discussed in the paper?
 
 **Hint**
 - Search online for EXIF viewers and steganography tools!
 
 
-
-- Continue following the trail... What is the second steganography technique used?
-- The flag obtained contains a link to a research paper. What is the phone model discussed in the paper?
