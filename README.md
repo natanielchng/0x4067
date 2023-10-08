@@ -12,6 +12,7 @@ This project consists of 5 CTF tutorials, each dealing with a software security 
 The tutorials can be found under the `/tutorials` folder. The structure is as follows:
 ```
 /tutorials
+    README.md                       --> Overview of the CTF tutorials, with instructions and rules
     /cve
         CVE.md                      --> Handout for CVE in markdown format
         CVE.pdf                     --> Handout for CVE in PDF format
