@@ -1,5 +1,49 @@
 # 0x4067
-*Capture-The-Flag tutorials for NTU's Software Security course*
+*A Set of Capture-The-Flag tutorials for NTU's Software Security course*
+
+## Overview of Project
+This project consists of 5 CTF tutorials, each dealing with a software security topic:
+1. **CVE** - vulnerability assessment
+2. **Hashbrown** - cryptography
+3. **Hexhunt** - binary exploits
+4. **Timelapse** - side channels
+5. **Wacky Web Woes** - web vulnerabilities
+
+The tutorials can be found under the `/tutorials` folder. The structure is as follows:
+```
+/tutorials
+    /cve
+        CVE.md                      --> Handout for CVE in markdown format
+        CVE.pdf                     --> Handout for CVE in PDF format
+    /hashbrown
+        /src
+            hashbrown.out           --> Executable used in Hashbrown (Question 5)
+            hashbrown_source.py     --> Source code for hashbrown.out
+        Hashbrown.md                --> Handout for Hashbrown in Markdown format
+        Hashbrown.pdf               --> Handout for Hashbrown in PDF format
+    /hexhunt
+        /src
+            hexhunt.out             --> Executable used in Hexhunt (Question 1-3)
+            hexhunt_source.c        --> Source code for hexhunt.out
+        Hexhunt.md                  --> Handout for Hexhunt in Markdown format
+        Hexhunt.pdf                 --> Handout for Hexhunt in PDF format
+    /timelapse
+        /src
+            timelapse.out           --> Executable used in Timelapse (Question 1)
+            timelapse_source.py     --> Source code for timelapse.out
+        Timelapse.md                --> Handout for Timelapse in Markdown format
+        Timelapse.pdf               --> Handout for Timelapse in PDF format
+    /wackywebwoes
+        /src
+            wackywebwoes.py         --> The main Flask web application used in Wacky Web Woes
+            routes.py               --> contains the routes used by wackywebwoes.py
+            /static
+                /css
+                    pico.min.css    --> CSS styling for the Flask application
+            /templates              --> folder containing the HTML templates used in the Flask application
+        WackyWebWoes.md             --> Handout for WackyWebWoes in PDF format
+        WackyWebWoes.pdf            --> Handout for WackyWebWoes in PDF format
+```
 
 ## Modifying & Building the Challenges
 
@@ -25,12 +69,7 @@ The source code for Wacky Web Woes can be found in `/wackywebwoes/src`.
 Wacky Web Woes is a simple Flask project. An overview of the project structure is as follows:
 ```
 /src
-    wackywebwoes.py     --> The main Flask application
-    routes.py           --> contains the routes used by wackywebwoes.py
-    /static
-        /css
-           pico.min.css --> CSS styling for the Flask application
-    /templates          --> folder containing the HTML templates used in the Flask application
+    
 ```
 
 `Pyinstaller` is used to bundle the Flask application into a single executable file. In the Flask project directory of `wackywebwoes.py`, run the following command:
