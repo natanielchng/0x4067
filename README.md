@@ -9,7 +9,7 @@ This project consists of 5 CTF tutorials, each dealing with a software security 
 4. **Timelapse** - side channels
 5. **Wacky Web Woes** - web vulnerabilities
 
-Download the the `CTF Tutorials.zip` file for distribution.
+Download the `CTF Tutorials.zip` file for distribution (does not contain source code).
 
 The tutorials can be found under the `/tutorials` folder. The structure is as follows:
 ```
