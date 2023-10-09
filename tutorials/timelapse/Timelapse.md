@@ -1,28 +1,13 @@
 # Timelapse
-*In this tutorial, you will explore side-channels, metadata and steganography. Question 1 uses the `timelapse.out` executable provided.*
 
 ## Question 1
 - What is a vulnerability where an attacker can gain information about a system's secret or private data by measuring the time it takes for certain operations to complete?
-- What is the flag obtained from the `timelapse` program?
+- What is the flag obtained from the `timelapse.out` program?
 
 **Hint**
-- The `timelapse` program takes in a 4 digit password. There also seems to be a delay when processing the password. Find out if the delay varies with the digits entered.
-   ```sh
-   $ ./timelapse 
-
-   
-   ███████  ██ ███    ███ ██████  ██      ██   ██ ██████  ███████ ██████  
-      ██   ███ ████  ████      ██ ██      ██   ██ ██   ██ ██           ██ 
-      ██    ██ ██ ████ ██  █████  ██      ███████ ██████  ███████  █████  
-      ██    ██ ██  ██  ██      ██ ██           ██ ██           ██      ██ 
-      ██    ██ ██      ██ ██████  ███████      ██ ██      ███████ ██████
-   
-   Usage: ./timelapse <password>
-   Please enter the 4 digit numerical password...
+- The `timelapse.out` program takes in a 4 digit password. There seems to be a delay when processing the password. Find out if the delay varies with the digits entered.
    ```
-
-   ```
-   $ ./timelapse 0000
+   $ ./timelapse.out 0000
 
    
    ███████  ██ ███    ███ ██████  ██      ██   ██ ██████  ███████ ██████  
@@ -41,8 +26,8 @@
    ```
 ## Question 2
 - You have been tasked with investigating an image found at the following link: `https://raw.githubusercontent.com/0x4067/KpMU0l0N/main/SCSE.png`. What is interesting about the metadata of the image?
-- A QR code with a link to a text file is hidden somewhere within the image. What is the steganography technique used in the text file?
-- The flag obtained contains a link to a research paper. What is the phone model discussed in the paper?
+- A QR code with another link to a text file is hidden somewhere within the image. What is the steganography technique used in the text file?
+- The flag obtained from the text file contains yet another link to a research paper. What is the phone model discussed in the paper?
 
 **Hint**
 - Search online for EXIF viewers and steganography tools!

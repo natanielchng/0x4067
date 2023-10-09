@@ -1,15 +1,14 @@
 # Hexhunt
-*In this tutorial, you will explore binary exploitation techniques! The questions use the `hexhunt.out` executable provided. Ensure that you are running it in a sandboxed environment (like a Kali Linux VM)!*
 
 ## Question 1
-- What is the name of the vulnerability found when using the `-o` option in the `hexhunt` binary?
+- What is the name of the vulnerability found when using the `-o` option in the `hexhunt.out` binary?
 - What is the size of the buffer used?
 - What is the flag obtained?
 
 **Hint**
 - Try sending different values as the input!
   ```
-  $ ./hexhunt -o example.com
+  $ ./hexhunt.out -o example.com
     _    ____    _            ____ 
   | |_ |__ /_ _| |_ _  _ _ _|__  |
   | ' \ |_ \ \ / ' \ || | ' \ / / 
@@ -28,7 +27,7 @@
 **Hint**
 - Find out what happens when you send additional payloads even if the quota is 0...
   ```
-  $ ./hexhunt -d example.com
+  $ ./hexhunt.out -d example.com
     _    ____    _            ____ 
   | |_ |__ /_ _| |_ _  _ _ _|__  |
   | ' \ |_ \ \ / ' \ || | ' \ / / 
@@ -53,7 +52,7 @@
 **Hint**
 - It is easy to find out an input that will cause a segmentation fault...
   ```
-  $./hexhunt -r example.com
+  $./hexhunt.out -r example.com
     _    ____    _            ____ 
   | |_ |__ /_ _| |_ _  _ _ _|__  |
   | ' \ |_ \ \ / ' \ || | ' \ / / 
@@ -70,7 +69,7 @@
   ```py
   import pwn
 
-  args = ['./hexhunt', '-r', 'ntu.edu.sg']
+  args = ['./hexhunt.out', '-r', 'ntu.edu.sg']
   p = pwn.process(args)
   elf = pwn.ELF(p.argv[0])
 

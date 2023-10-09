@@ -1,5 +1,4 @@
 # Catastrophic Vulnerabilities Everywhere (CVE)
-*In this tutorial, you will use open source intelligence (OSINT) to uncover vulnerabilities on the web!*
 
 ## Question 1
 - You have been tasked to investigate an IP address `155.69.19.55`. What is a search engine you can use to find internet-connected devices?

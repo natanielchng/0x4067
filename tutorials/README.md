@@ -1,13 +1,4 @@
 # 0x4067
-*A set of Capture-The-Flag tutorials for NTU's Software Security course*
-
-## Before Starting...
-
-You are strongly advised to attempt the tutorial questions in the following environment:
-- Kali Linux 2023.3 x64
-- Oracle VM VirtualBox Manager
-
-Kali Linux offers prebuilt virtual machines, so it might be faster to get your environment up and running!
 
 ## Tutorial Questions
 
@@ -18,9 +9,32 @@ There are 5 tutorial sets, each covering a different aspect of software security
 4. **Timelapse**
 5. **Wacky Web Woes**
 
-Things to note:
-- Each tutorial set will have a file describing the various tasks and questions to complete.
-- Flags take the format of `0x4067{...}`. 
-- Most of the questions also require some form of short answer :). Capturing the flag is not the main objective -- it is having fun learning about cybersecurity!
-- You do not need to reverse engineer any file to complete the tutorials
-- Try your best to complete the tutorials without looking at the solutions
+Each tutorial has a its own folder containing:
+- A handout in Markdown and PDF format
+- Additional files required in the tutorial
+
+Flags take the format of `0x4067{...}`. However, most questions require short answers instead.  
+This is because the focus of the tutorials is not to simply capture flags, but have fun exploring cybersecurity!
+
+## Before Starting...
+
+You are strongly advised to attempt the tutorial questions in the following environment:
+- Kali Linux 2023.3 x64
+- Oracle VM VirtualBox Manager
+
+Ensure that you are also able to access the internet from the VM.
+
+Kali Linux offers prebuilt VMs, so it might be faster to get your environment up and running.  
+It also comes with various tools that you will find useful in these tutorials and future CTFs.
+
+## Attempting the Tutorial Questions
+
+For example, in the Hexhunt tutorial, the executable has the file name `hexhunt.out`.  
+
+To run the executable from Linux terminal,
+- Ensure you have permissions to run it by running `chmod +x hexhunt.out`
+- Run the executable with `./hexhunt.out`
+
+Be sure to attempt the tutorial questions on your own before looking at the solutions.
+
+Good luck and have fun!

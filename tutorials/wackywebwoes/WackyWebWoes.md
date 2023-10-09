@@ -1,42 +1,35 @@
 # Wacky Web Woes
-*In this tutorial, you will explore web app vulnerabilities. Use the `wackywebwoes.out` executable in a VM (that launches a web app) to access 7 rooms, each with clues, flags, and vulnerabilities.*
 
 ## Question 0
-- What kind of server is the `wackywebwoes` program running?
+- What kind of server is the `wackywebwoes.out` program running?
 - Explore Room 0 to get to Room 1. What is the flag hidden in Room 0?
-
-**Hint**
-- Remember to set the 'execute' permissions of `wackywebwoes`. Then run the program as follows:
-    ```bash
-    $ ./wackywebwoes 
-
-    ┬ ┬┌─┐┌─┐┬┌─┬ ┬  ┬ ┬┌─┐┌┐   ┬ ┬┌─┐┌─┐┌─┐
-    │││├─┤│  ├┴┐└┬┘  │││├┤ ├┴┐  ││││ │├┤ └─┐
-    └┴┘┴ ┴└─┘┴ ┴ ┴   └┴┘└─┘└─┘  └┴┘└─┘└─┘└─┘
-
-    Running on http://0.0.0.0:5000
-    ```
 
 ## Question 1
 - Read more about the `rockyou.txt` wordlist. When was this wordlist created?
 - Room 1 can be solved with directory enumeration. What is the name of the hidden directory?
-- What is a directory enumeration tool written in `Go`?
+- What is another directory enumeration tool written in `Go`?
 
 **Hint**
-- For Room 1, it is sufficient to use `dirb` and the default wordlists.
+- For Room 1, it is sufficient to use `dirb` with its default wordlists.
     ```
-    $ dirb http://0.0.0.0:5000/ /usr/share/wordlists/dirb/common.txt
+    $ dirb http://0.0.0.0:5000/
     ```
 
 ## Question 2
 - Room 2 deals with a cookie. What is the cookie encoded with?
+- The cookie needs to be modified to access Room 3. What value needs to be changed?
 
 **Hint**
-- Like the other tutorial questions, CyberChef can help solve this one. You would also need to use the browser tools.
+- CyberChef and browser tools can help solve this question.
 
 ## Question 3
 - What is a commonly used pentesting tool for intercepting and modifying HTTP requests?
-- What HTTP methods does Room 3 accept? What is the flag obtained from making this request?
+- What HTTP methods does Room 3 accept? Making a HTTP request using one of the methods reveals a flag.
+- Exploit the vulnerability described in Room 3 to move on to Room 4!
+
+**Hint**
+- The tool in question is made by a company called PortSwigger...
+- The tool has a function to make repeated requests to a URL
 
 ## Question 4
 - What kind of XSS vulnerability is being demonstrated in Room 4?
@@ -51,7 +44,7 @@
 ## Question 5
 - What kind of SQL injection is being demonstrated in Room 5?
 - What is the username used for the login form?
-- How many columns are there in the SQLite database used?
+- How many columns are there in the table used?
 
 **Hint**
 - To solve this question, be sure to check the webpage source. 
