@@ -9,7 +9,7 @@ There are 5 tutorial sets, each covering a different aspect of software security
 4. **Timelapse**
 5. **Wacky Web Woes**
 
-Each tutorial has a its own folder containing:
+Each tutorial has its own folder containing:
 - A handout in Markdown and PDF format
 - Additional files required in the tutorial
 
