@@ -38,3 +38,5 @@ To run the executable from Linux terminal,
 Be sure to attempt the tutorial questions on your own before looking at the solutions.
 
 Good luck and have fun!
+
+If you have any questions, kindly contact me at `nchng002@e.ntu.edu.sg`
